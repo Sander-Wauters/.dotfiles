@@ -19,6 +19,8 @@ All keybindings have been changed for use with the "azert" keyboard layout (I kn
   - File bookmarks in `~/.config/shell/bm-files`
   - Directory bookmarks in `~/.config/shell/bm-dirs`
 
+To save changes made in `~/.config/dwm` and `~/.config/dwmblocks` run `~/.local/bin/rebootdwm`.
+
 ## Default Desktop Artwork
 
 Thomas Thiemeyer's _The Road to Samarkand_ ([fb](https://www.facebook.com/t.thiemeyer/), [insta](https://www.instagram.com/tthiemeyer/), [shop](https://www.redbubble.com/de/people/TThiemeyer/shop))

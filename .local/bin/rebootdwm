@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Update dwm
+cp -u ~/.config/dwm/config.h ~/.local/src/dwm/config.h
+make ~/.local/src/dwm
+
+# Update dwmblocks
+cp -u ~/.config/dwmblocks/config.h ~/.local/src/dwmblocks/config.h
+make ~/.local/src/dwmblocks
