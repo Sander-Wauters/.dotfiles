@@ -4,6 +4,7 @@ Based on Luke Smith <https://lukesmith.xyz>'s dotfiles.
 All keybindings have been changed for use with the "azert" keyboard layout (I know, sue me).
 
 - Very useful scripts are in `~/.local/bin/`
+- Install scripts and list of programs are in `~/.setup/`
 - Settings for:
   - nvim (text editor)
   - zsh (shell)
@@ -20,6 +21,7 @@ All keybindings have been changed for use with the "azert" keyboard layout (I kn
   - Directory bookmarks in `~/.config/shell/bm-dirs`
 
 To save changes made in `~/.config/dwm` and `~/.config/dwmblocks` run `~/.local/bin/rebootdwm`.
+This will automaticaly recompile `dwm` and `dwmblocks`.
 
 ## Default Desktop Artwork
 
