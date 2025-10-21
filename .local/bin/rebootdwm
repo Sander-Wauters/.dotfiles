@@ -7,3 +7,5 @@ make ~/.local/src/dwm
 # Update dwmblocks
 cp -u ~/.config/dwmblocks/config.h ~/.local/src/dwmblocks/config.h
 make ~/.local/src/dwmblocks
+cd ~/.local/src/dwmblocks
+autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
