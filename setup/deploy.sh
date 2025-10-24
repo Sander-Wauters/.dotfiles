@@ -337,6 +337,7 @@ echo "kernel.dmesg_restrict = 0" > /etc/sysctl.d/dmesg.conf
 
 # Cleanup
 rm -f /etc/sudoers.d/deploy-temp
+rm -f "/home/$name/.config/nvim/shortcuts.vim"
 
 # Last message! Install complete!
 finalize
