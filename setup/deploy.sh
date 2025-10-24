@@ -269,11 +269,11 @@ installationloop
 
 # Install the dotfiles in the user's home directory and symlink them.
 reinstalldotfiles "$dotfilesrepo" "/home/$name/.dotfiles" "$repobranch"
-ln -sf ".dotfile/.config/" "/home/$name/.config" 
-ln -sf ".dotfile/.local/" "/home/$name/.local" 
-ln -sf ".dotfile/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
-ln -sf ".dotfile/.config/x11/xprofile" "/home/$name/.xprofile"  
-ln -sf ".dotfile/.config/shell/profile" "/home/$name/.zprofile"  
+ln -sf "/home/$name/.dotfiles/.config/" "/home/$name/.config" 
+ln -sf "/home/$name/.dotfiles/.local/" "/home/$name/.local" 
+ln -sf "/home/$name/.dotfiles/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
+ln -sf "/home/$name/.dotfiles/.config/x11/xprofile" "/home/$name/.xprofile"  
+ln -sf "/home/$name/.dotfiles/.config/shell/profile" "/home/$name/.zprofile"  
 
 # Write urls for newsboat if it doesn't already exist
 [ -s "/home/$name/.config/newsboat/urls" ] ||
