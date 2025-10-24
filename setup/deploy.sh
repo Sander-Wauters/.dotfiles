@@ -225,6 +225,14 @@ preinstallmsg || error "User exited."
 
 ### The rest of the script requires no user input.
 
+# Install the dotfiles in the user's home directory and symlink them.
+reinstalldotfiles "$dotfilesrepo" "/home/$name/.dotfiles" "$repobranch"
+ln -sf "/home/$name/.dotfiles/.config/" "/home/$name/.config" 
+ln -sf "/home/$name/.dotfiles/.local/" "/home/$name/.local" 
+ln -sf "/home/$name/.dotfiles/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
+ln -sf "/home/$name/.dotfiles/.config/x11/xprofile" "/home/$name/.xprofile"  
+ln -sf "/home/$name/.dotfiles/.config/shell/profile" "/home/$name/.zprofile"  
+
 # Refresh Arch keyrings.
 refreshkeys ||
 	error "Error automatically refreshing Arch keyring. Consider doing so manually."
@@ -266,14 +274,6 @@ $aurhelper -Y --save --devel
 # the user has been created and has priviledges to run sudo without a password
 # and all build dependencies are installed.
 installationloop
-
-# Install the dotfiles in the user's home directory and symlink them.
-reinstalldotfiles "$dotfilesrepo" "/home/$name/.dotfiles" "$repobranch"
-ln -sf "/home/$name/.dotfiles/.config/" "/home/$name/.config" 
-ln -sf "/home/$name/.dotfiles/.local/" "/home/$name/.local" 
-ln -sf "/home/$name/.dotfiles/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
-ln -sf "/home/$name/.dotfiles/.config/x11/xprofile" "/home/$name/.xprofile"  
-ln -sf "/home/$name/.dotfiles/.config/shell/profile" "/home/$name/.zprofile"  
 
 # Write urls for newsboat if it doesn't already exist
 [ -s "/home/$name/.config/newsboat/urls" ] ||
