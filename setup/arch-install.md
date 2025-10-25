@@ -96,7 +96,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 (Optional) When using `btrfs` on the root partition.
-You can compress data on the fly by adding an `compress-zstd` option to each of the `btrfs` entries in `/etc/fstab`.
+You can compress data on the fly by adding an `compress=zstd` option to each of the `btrfs` entries in `/etc/fstab`.
 This way data is compressed on the fly, so you can fit much more in your drive.
 The only cost being a minor CPU usage increase.
 The crypt-device will also have less physical data to encrypt, so the CPU-time needed might actually go down, resulting in higher total disk throughput.
