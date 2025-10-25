@@ -33,6 +33,9 @@ o.termguicolors = true
 -- amount of lines shown at top of screen
 o.scrolloff = 8
 
+-- max width indicator
+o.colorcolumn = "80"
+
 -- copy clipboard
 o.clipboard = "unnamedplus"
 
