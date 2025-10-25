@@ -247,3 +247,13 @@ Exit and reboot the system.
 exit
 reboot
 ```
+
+(Optional) Automatically log on with your user when decrypting the drive on boot.
+Add the following to `/etc/systemd/system/getty@tty1.service.d/autologin.conf` (create the directory if it does not exist):
+
+```
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --noreset --noclear --autologin sander - ${TERM}
+```
+
