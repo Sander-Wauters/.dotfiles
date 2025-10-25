@@ -227,11 +227,11 @@ preinstallmsg || error "User exited."
 
 # Install the dotfiles in the user's home directory and symlink them.
 reinstalldotfiles "$dotfilesrepo" "/home/$name/.dotfiles" "$repobranch"
-ln -sf "/home/$name/.dotfiles/.config/" "/home/$name/.config" 
-ln -sf "/home/$name/.dotfiles/.local/" "/home/$name/.local" 
-ln -sf "/home/$name/.dotfiles/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
-ln -sf "/home/$name/.dotfiles/.config/x11/xprofile" "/home/$name/.xprofile"  
-ln -sf "/home/$name/.dotfiles/.config/shell/profile" "/home/$name/.zprofile"  
+sudo -u "$name" ln -sf "/home/$name/.dotfiles/.config/" "/home/$name/.config" 
+sudo -u "$name" ln -sf "/home/$name/.dotfiles/.local/" "/home/$name/.local" 
+sudo -u "$name" ln -sf "/home/$name/.dotfiles/.config/gtk-2.0/gtkrc-2.0" "/home/$name/.gtkrc-2.0" 
+sudo -u "$name" ln -sf "/home/$name/.dotfiles/.config/x11/xprofile" "/home/$name/.xprofile"  
+sudo -u "$name" ln -sf "/home/$name/.dotfiles/.config/shell/profile" "/home/$name/.zprofile"  
 
 # Refresh Arch keyrings.
 refreshkeys ||
