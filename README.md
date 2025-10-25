@@ -23,6 +23,11 @@ All keybindings have been changed for use with the "azert" keyboard layout (I kn
 To save changes made in `~/.config/dwm` and `~/.config/dwmblocks` run `~/.local/bin/rebootdwm`.
 This will automaticaly recompile `dwm` and `dwmblocks`.
 
-## Default Desktop Artwork
+## Install
+
+To install the dotfiles run `setup/deploy.sh`.
+This will lead you through the installation.
+
+## Default desktop artwork
 
 Thomas Thiemeyer's _The Road to Samarkand_ ([fb](https://www.facebook.com/t.thiemeyer/), [insta](https://www.instagram.com/tthiemeyer/), [shop](https://www.redbubble.com/de/people/TThiemeyer/shop))
