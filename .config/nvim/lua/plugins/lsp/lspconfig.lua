@@ -14,7 +14,6 @@ return {
 			severity_sort = true,
 		})
 
-		local lspconfig = require("lspconfig")
 		local cmpNvimLsp = require("cmp_nvim_lsp")
 
 		local map = vim.keymap.set
@@ -57,43 +56,47 @@ return {
 		local capabilities = cmpNvimLsp.default_capabilities()
 
 		-- cpp
-		lspconfig.clangd.setup({
+		vim.lsp.config("clangd", {
 			capabilities = capabilities,
 			on_attach = onAttach,
+			cmd = {
+				"clangd",
+				"--compile-commands-dir=build",
+			},
 		})
 
 		-- css
-		lspconfig.cssls.setup({
+		vim.lsp.config("cssls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- html
-		lspconfig.html.setup({
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- java
-		lspconfig.jdtls.setup({
+		vim.lsp.config("jdtls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- javascript && typescript
-		lspconfig.ts_ls.setup({
+		vim.lsp.config("ts_ls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- angular
-		lspconfig.angularls.setup({
+		vim.lsp.config("angularls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- lua
-		lspconfig.lua_ls.setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 			settings = {
@@ -112,25 +115,25 @@ return {
 		})
 
 		-- cmake
-		lspconfig.cmake.setup({
+		vim.lsp.config("cmake", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- python
-		lspconfig.jedi_language_server.setup({
+		vim.lsp.config("jedi_language_server", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- gradle
-		lspconfig.gradle_ls.setup({
+		vim.lsp.config("gradle_ls", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
 
 		-- latex
-		lspconfig.ltex.setup({
+		vim.lsp.config("ltex", {
 			capabilities = capabilities,
 			on_attach = onAttach,
 		})
