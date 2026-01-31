@@ -159,7 +159,7 @@ pipinstall() {
 }
 
 installationloop() {
-	total=$(wc -l <progs.csv)
+	total=$(wc -l <"/home/$name/.dotfiles/setup/progs.csv")
 	aurinstalled=$(pacman -Qqm)
 	while IFS=, read -r tag program comment; do
 		n=$((n + 1))
@@ -171,7 +171,7 @@ installationloop() {
 		"P") pipinstall "$program" "$comment" ;;
 		*) maininstall "$program" "$comment" ;;
 		esac
-	done <progs.csv
+	done <"/home/$name/.dotfiles/setup/progs.csv"
 }
 
 reinstalldotfiles() {
