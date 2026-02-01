@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Update dwm
-cp -u ~/.config/dwm/config.h ~/.local/src/dwm/config.h
-make ~/.local/src/dwm
+cp --update=all ~/.config/dwm/config.h ~/.local/src/dwm/config.h
+cd ~/.local/src/dwm
+sudo make install
 
 # Update dwmblocks
-cp -u ~/.config/dwmblocks/config.h ~/.local/src/dwmblocks/config.h
-make ~/.local/src/dwmblocks
+cp --update=all ~/.config/dwmblocks/config.h ~/.local/src/dwmblocks/config.h
 cd ~/.local/src/dwmblocks
-autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+sudo make install

@@ -42,3 +42,11 @@ o.clipboard = "unnamedplus"
 -- split windows
 o.splitright = true
 o.splitbelow = true
+
+-- special filetypes
+vim.filetype.add({
+	extension = {
+		hlsl = "hlsl",
+		fx = "hlsl",
+	},
+})

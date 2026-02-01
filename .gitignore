@@ -3,6 +3,7 @@
 .config/shell/shortcutrc
 .config/shell/zshnameddirrc
 .config/zsh/.zcompdump
-.local/share/newsboat/cache.db
-.local/share/xorg/Xorg.0.log
-.local/state/wireplumber/stream-properties
+.config/librewolf/*
+.local/state/*
+.local/share/*
+.local/src/*
