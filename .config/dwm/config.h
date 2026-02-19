@@ -85,9 +85,9 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+{ MODKEY|ShiftMask,             KEY,      view,           {.ui = 1 << TAG} }, \
 { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
+{ MODKEY|Mod1Mask,                       KEY,      tag,            {.ui = 1 << TAG} }, \
 { MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define STACKKEYS(MOD,ACTION) \
 { MOD,	XK_j,	ACTION##stack,	{.i = INC(+1) } }, \
@@ -139,7 +139,7 @@ static const Key keys[] = {
                 /* { MODKEY|ShiftMask,		XK_Escape,     spawn,	               SHCMD("") }, */
                 { MODKEY,			XK_0,          spawn,	               {.v = (const char*[]){ "dmenuunicode", NULL } } },
         /* { MODKEY|ShiftMask,		XK_0,          togglescratch,	       SHCMD("") }, */
-        TAGKEYS(			XK_ampersand,  0)
+                TAGKEYS(			XK_ampersand,  0)
                 TAGKEYS(			XK_eacute,     1)
                 TAGKEYS(			XK_quotedbl,   2)
                 TAGKEYS(			XK_apostrophe, 3)

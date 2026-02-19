@@ -4,6 +4,10 @@
 .config/shell/zshnameddirrc
 .config/zsh/.zcompdump
 .config/librewolf/*
+.config/discord/*
+.config/calcurse/*
+.config/go/*
+.config/ncmpcpp/*
 .local/state/*
 .local/share/*
 .local/src/*

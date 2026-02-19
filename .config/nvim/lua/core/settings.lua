@@ -47,6 +47,7 @@ o.splitbelow = true
 vim.filetype.add({
 	extension = {
 		hlsl = "hlsl",
+		fxh = "hlsl",
 		fx = "hlsl",
 	},
 })
