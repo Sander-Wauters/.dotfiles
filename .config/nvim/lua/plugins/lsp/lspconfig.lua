@@ -101,6 +101,12 @@ return {
 			on_attach = onAttach,
 		})
 
+		-- PHP
+		vim.lsp.config("intelephense", {
+			capabilities = capabilities,
+			on_attach = onAttach,
+		})
+
 		-- lua
 		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
