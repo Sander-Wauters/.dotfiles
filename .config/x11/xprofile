@@ -5,7 +5,7 @@
 setxkbmap -layout be
 
 # Set DPI. User may want to use a larger number for larger screens.
-xrandr --dpi 96 --output eDP-1 --primary --mode 1920x1080 --output HDMI-1-1 --mode 1920x1080 --above eDP-1	
+xrandr --dpi 96 --output eDP-1 --primary --mode 1920x1080 --output HDMI-1-1 --mode 1920x1080 --right-of eDP-1
 setbg &			# set the background with the `setbg` script
 #xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 

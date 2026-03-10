@@ -89,6 +89,12 @@ return {
 			on_attach = onAttach,
 		})
 
+		-- tailwind
+		vim.lsp.config("tailwindcss", {
+			capabilities = capabilities,
+			on_attach = onAttach,
+		})
+
 		-- angular
 		vim.lsp.config("angularls", {
 			capabilities = capabilities,
