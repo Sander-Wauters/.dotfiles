@@ -30,6 +30,8 @@ return {
 			"typescript",
 			"c",
 			"lua",
+			"odin",
+			"json5",
 			"vim",
 			"vimdoc",
 			"query",
