@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp --update=all ~/.config/st/config.h ~/.local/src/st/config.h
+cd ~/.local/src/st
+sudo make install
