@@ -12,6 +12,7 @@ return {
 		mason.setup()
 		masonLspconfig.setup({
 			ensure_installed = {
+				"ols",
 				"angularls",
 				"intelephense",
 				"clangd",

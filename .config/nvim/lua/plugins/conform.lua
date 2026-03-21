@@ -2,7 +2,18 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
+		-- Odinfmt gets its configuration from odinfmt.json. It defaults
+		-- writing to stdout but needs to be told to read from stdin.
+		formatters = {
+			odinfmt = {
+				-- Change where to find the command if it isn't in your path.
+				command = "odinfmt",
+				args = { "-stdin" },
+				stdin = true,
+			},
+		},
 		formatters_by_ft = {
+			odin = { "odinfmt" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			typescript = { "prettierd", "prettier", stop_after_first = true },
 			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
