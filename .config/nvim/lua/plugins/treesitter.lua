@@ -1,22 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
+	branch = "main",
 	lazy = false,
-	init = function()
-		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-
-		parser_config.hlsl = {
-			install_info = {
-				url = "https://github.com/theHamsta/tree-sitter-hlsl",
-				files = { "src/parser.c" },
-				branch = "main",
-			},
-			filetype = "hlsl",
-		}
-	end,
-	config = function(_, opts)
-		require("nvim-treesitter.configs").setup(opts)
-	end,
+	build = ":TSUpdate",
 	opts = {
 		ensure_installed = {
 			"python",
@@ -51,4 +37,13 @@ return {
 			additional_vim_regex_highlighting = false,
 		},
 	},
+	config = function(_, opts)
+		require("nvim-treesitter").install(opts.ensure_installed)
+
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function(args)
+				pcall(vim.treesitter.start, args.buf)
+			end,
+		})
+	end,
 }

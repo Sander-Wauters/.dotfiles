@@ -19,7 +19,7 @@ return {
 		local map = vim.keymap.set
 
 		local opts = { noremap = true, silent = true }
-		local onAttach = function(client, bufnr)
+		local onAttach = function(_, bufnr)
 			opts.buffer = bufnr
 
 			opts.desc = "Show LSP references"
@@ -50,7 +50,9 @@ return {
 			map("n", "K", vim.lsp.buf.hover, opts)
 
 			opts.desc = "Restart LSP"
-			map("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
+			map("n", "<leader>rs", function()
+				vim.cmd.lsp("restart")
+			end, opts)
 		end
 
 		local capabilities = cmpNvimLsp.default_capabilities()

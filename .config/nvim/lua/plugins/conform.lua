@@ -7,7 +7,7 @@ return {
 		formatters = {
 			odinfmt = {
 				-- Change where to find the command if it isn't in your path.
-				command = "odinfmt",
+				command = vim.fn.stdpath("data") .. "/mason/packages/ols/odinfmt-x86_64-unknown-linux-gnu",
 				args = { "-stdin" },
 				stdin = true,
 			},

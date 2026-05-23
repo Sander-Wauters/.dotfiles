@@ -24,7 +24,6 @@ return {
 				"tailwindcss",
 				"ts_ls",
 			},
-			automatic_installation = true,
 		})
 		masonToolInstaller.setup({
 			ensure_installed = {
